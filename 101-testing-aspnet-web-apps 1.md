@@ -5,8 +5,8 @@ nav_order: 10101
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: In this module, we'll meet the WebApplicationFactory and learn how to write automated tests for ASP.NET Core web applications
-previous: mwnet101
-complete: mwnet102
+previous: rockaway100
+complete: rockaway101
 ---
 The Rockaway app includes an XUnit test project - but what are we actually testing?
 
@@ -26,7 +26,7 @@ What we want to do is test that those pages exist, and that if we request the co
 
 ![web-application-factory-brain-meme](./images/web-application-factory-brain-meme.jpeg)
 
-Let's use `WebApplicationFactory` to plug in an end-to-end test that'll verify that our `/status` page is actually working
+Let's use `WebApplicationFactory` to plug in an end-to-end test that'll verify that our pages are actually working.
 
 First, install the package. From the `Rockaway` folder:
 
@@ -80,7 +80,15 @@ Delete `UnitTest1.cs`, and create a new file.
 >
 > `using` indicates we're constructing something that might need cleaning up, so the runtime will call `.Dispose()` on that object once it's no longer in use. `await using` means the clean-up can happen asynchronously, so the runtime will call `await DisposeAsync()` instead of `Dispose`.
 
-Now run our tests with `dotnet test` and verify they pass.
+Now run our test with `dotnet test` and verify that is passes.
+### Exercise
+
+Our app includes  pages in our sample app - `/privacy` 
+
+Add page tests that verify both of these pages return a success status code.
+
+
+
 
 
 

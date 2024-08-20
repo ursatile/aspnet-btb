@@ -5,10 +5,9 @@ nav_order: 10102
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: In this module we cover some more advanced test patterns you can use with the WebApplicationFactory, and two of my favourite NuGet packages - Shouldly and AngleSharp.
-previous: 101
-complete: 102
+previous: rockaway101
+complete: rockaway102
 ---
-
 Let's install some more NuGet packages. **Shouldly** is a library for doing fluent assertions with .NET, and **AngleSharp** gives us the ability to query HTML documents from C#.
 
 ```

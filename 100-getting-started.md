@@ -5,7 +5,7 @@ nav_order: 10100
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: Let's meet Rockaway, the sample app we'll be using to explore the wonderful world of advanced web app development using ASP.NET 8 and C#
-complete: "100"
+complete: rockaway100
 ---
 Let's get up and running with Rockaway.
 

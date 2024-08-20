@@ -5,8 +5,8 @@ nav_order: 10202
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: "In this module, we'll use ASP.NET's Minimal APIs feature to add a status endpoint to our application"
-previous: mwnet201
-complete: mwnet202
+previous: rockaway201
+complete: rockaway202
 ---
 
 In the last module, we set up continuous deployment (CD) for our project using GitHub Actions.

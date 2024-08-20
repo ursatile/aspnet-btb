@@ -5,8 +5,8 @@ nav_order: 10201
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: "In this module, we'll deploy our ASP.NET Core web application to Microsoft Azure using GitHub Actions"
-previous: 102
-complete: 201
+previous: rockaway102
+complete: rockaway201
 ---
 
 We've got a web app, it's got at least two pages, and we have some tests that prove our pages are working. Time to...
