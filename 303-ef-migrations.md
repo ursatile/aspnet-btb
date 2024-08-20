@@ -5,8 +5,8 @@ nav_order: 10303
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: "In this module, we'll learn how to manage our app's database schema using EF Migrations"
-previous: mwnet302
-complete: mwnet303
+previous: rockaway302
+complete: rockaway303
 migration: InitialCreate
 ---
 

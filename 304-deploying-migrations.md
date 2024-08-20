@@ -5,8 +5,8 @@ nav_order: 10304
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: "In this module, we'll learn how to deploy EF Migrations during our GitHub Actions deployment"
-previous: mwnet303
-complete: mwnet304
+previous: rockaway303
+complete: rockaway304
 ---
 
 By the end of the last section, we'd created a database migration and applied it to our local database.
@@ -54,30 +54,30 @@ using (var scope = app.Services.CreateScope()) {
 Now we'll modify our `main_rockaway.yml` to use the published application package as a migration runner during deployment:
 
 ```yaml
-  deploy: 
-    runs-on: ubuntu-latest 
-    needs: build 
-    environment: 
-      name: 'Production' 
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }} 
- 
-    steps: 
-      - name: Download artifact from build job 
-        uses: actions/download-artifact@v2 
-        with: 
-          name: .net-app 
- 
-      - name: Deploy to Azure Web App 
-        id: deploy-to-webapp 
-        uses: azure/webapps-deploy@v2 
-        with: 
-          app-name: 'rockaway' 
-          slot-name: 'Production' 
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71369816C78847E78E5A0896E1B7E07D }} 
-          package: . 
-       
-      - name: Apply EF Core migrations         
-        run: dotnet Rockaway.WebApp.dll -- --e ConnectionStrings:AZURE_SQL_CONNECTIONSTRING="${% raw %}{{ secrets.AZURE_SQL_CONNECTIONSTRING }}{% endraw %}" apply-migrations=true 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'Production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: .net-app
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'rockaway'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_71369816C78847E78E5A0896E1B7E07D }}
+          package: .
+
+      - name: Apply EF Core migrations
+        run: dotnet Rockaway.WebApp.dll -- --e ConnectionStrings:AZURE_SQL_CONNECTIONSTRING="${% raw %}{{ secrets.AZURE_SQL_CONNECTIONSTRING }}{% endraw %}" apply-migrations=true
 ```
 
 We'll need to provide a connection string, because this code is running on GitHub's Actions infrastructure which doesn't have access to Azure's configuration.
