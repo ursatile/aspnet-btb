@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "102-testing-aspnet-web-apps.md",
+                "file": "editorconfig.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "102-testing-aspnet-web-apps.md",
+                "file": "editorconfig.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "102-testing-aspnet-web-apps.md",
+                "file": "editorconfig.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "102-testing-aspnet-web-apps.md"
+                "file": "editorconfig.md"
               }
             }
           }
@@ -148,13 +148,16 @@
   },
   "active": "6d0b754aef6d56aa",
   "lastOpenFiles": [
+    "examples/create-rockaway-database.sql",
+    "examples/editorconfig",
+    "101-up-and-running-with-rockaway.md",
+    "001-introduction.md",
+    "801-aspire-dashboard.md",
+    "102-testing-aspnet-web-apps.md",
     "examples",
     "New folder",
     "Untitled.md",
-    "102-testing-aspnet-web-apps.md",
-    "101-up-and-running-with-rockaway.md",
     "index.md",
-    "001-introduction.md",
     "README.md",
     "images/venues/electric-brixton.jpg",
     "images/venues/bataclan.webp",
@@ -173,8 +176,6 @@
     "images/02-introducing-entity-framework",
     "images",
     "examples/701/Rockaway/Rockaway.WebApp.Tests/obj/Release/net8.0/Rockaway.WebApp.Tests.GeneratedMSBuildEditorConfig.editorconfig",
-    "examples/701/Rockaway/Rockaway.WebApp.Tests/obj/Release/net8.0/Rockaway.WebApp.Tests.csproj.AssemblyReference.cache",
-    "examples/701/Rockaway/Rockaway.WebApp.Tests/obj/Release/net8.0/Rockaway.WebApp.Tests.sourcelink.json",
     "examples/505/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/502/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/504/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
@@ -192,7 +193,6 @@
     "examples/302/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/201/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/300/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/202/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/103/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
+    "examples/202/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
   ]
 }
