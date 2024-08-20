@@ -27,6 +27,8 @@ Monday PM: make it look nice
 Tuesday AM: MJML and email
 
 * Architecture: components, dependencies, break it out into pieces
-* Aspire and OTEL
-* 
+
+Tuesday PM: Aspire, OTEL, AOB
+
+
 
