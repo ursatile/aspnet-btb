@@ -22,14 +22,14 @@ dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 
 ## The Artist Entity
 
-The `Artist` entity represents a band, performer or musical act. 
+The `Artist` entity represents a band, performer or musical act.
 
 Create this class in `Rockaway.WebApp/Data/Entities`:
 
 ```csharp
 // Rockaway.WebApp/Data/Entities/Artist.cs
 
-{% include_relative examples/301/Rockaway/Rockaway.WebApp/Data/Entities/Artist.cs %}
+{% include_relative examples/301/Rockaway.WebApp/Data/Entities/Artist.cs %}
 ```
 
 ## Working with Sample Data
@@ -43,7 +43,7 @@ We're going to build out our sample data as a set of partial classes. First, the
 ```csharp
 // Rockaway.WebApp/Data/Sample/SampleData.cs
 
-{% include_relative examples/301/Rockaway/Rockaway.WebApp/Data/Sample/SampleData.cs %}
+{% include_relative examples/301/Rockaway.WebApp/Data/Sample/SampleData.cs %}
 ```
 
 Then there's the sample data for the `Artist` entity, which uses this pattern:
@@ -70,10 +70,10 @@ public partial class SampleData {
 			"<Body>Bag",
 			"Speed metal pioneers from San Francisco, <Body>Bag helped define the “web rock” sound in the early 2020s.",
 			"body-bag"
-		);    
+		);
 ```
 
-You can download the full data set here: **[SampleData.Artists.cs](examples/301/Rockaway/Rockaway.WebApp/Data/Sample/SampleData.Artists.cs)**
+You can download the full data set here: **[SampleData.Artists.cs](examples/301/Rockaway.WebApp/Data/Sample/SampleData.Artists.cs)**
 
 ## The RockawayDbContext
 
@@ -82,7 +82,7 @@ All database access in EF Core is managed via something called a `DbContext`. Ou
 ```csharp
 // Rockaway.WebApp/Data/RockawayDbContext.cs
 
-{% include_relative examples/301/Rockaway/Rockaway.WebApp/Data/RockawayDbContext.cs %}
+{% include_relative examples/301/Rockaway.WebApp/Data/RockawayDbContext.cs %}
 ```
 
 Note how we're using the `HasData()` method to populate our `Artists` DbSet with our sample data.
@@ -104,7 +104,7 @@ We're also using an **in-memory database** - this is created on demand, persists
 ```csharp
 // Rockaway.WebApp/Program.cs
 
-{% include_relative examples/301/Rockaway/Rockaway.WebApp/Program.cs %}
+{% include_relative examples/301/Rockaway.WebApp/Program.cs %}
 ```
 
 ## Using DbContext in Razor Pages
@@ -116,7 +116,7 @@ Here's a sample page that'll list all the artists in our database, just so we ca
 `Rockaway.WebApp/Pages/Artists.cshtml`:
 
 ```html
-{% include_relative examples/301/Rockaway/Rockaway.WebApp/Pages/Artists.cshtml %}
+{% include_relative examples/301/Rockaway.WebApp/Pages/Artists.cshtml %}
 ```
 
 and the accompanying C# "code-behind" file:
@@ -124,7 +124,7 @@ and the accompanying C# "code-behind" file:
 ```csharp
 // Rockaway.WebApp/Pages/Artists.cshtml.cs
 
-{% include_relative examples/301/Rockaway/Rockaway.WebApp/Pages/Artists.cshtml.cs %}
+{% include_relative examples/301/Rockaway.WebApp/Pages/Artists.cshtml.cs %}
 ```
 
 Now, when we run our application and point a browser at `/artists`, we get this:
@@ -136,7 +136,7 @@ Now, when we run our application and point a browser at `/artists`, we get this:
 To check that our page is rendering the complete list of artists, we can retrieve the list of artists from our `DbContext` inside our test code, and compare what's in the database to what appears on the page:
 
 ```csharp
-{% include_relative examples/301/Rockaway/Rockaway.WebApp.Tests/Pages/ArtistTests.cs %}
+{% include_relative examples/301/Rockaway.WebApp.Tests/Pages/ArtistTests.cs %}
 ```
 
 > Remember, HTML isn't plain text. A string like `<Script>Kiddies` will appear in your page output as `&lt;Script&gt;Kiddies`, so you'll need to run the HTML through something like `System.Net.WebUtility.HtmlDecode` to turn the HTML entities back into literal text.

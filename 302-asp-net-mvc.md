@@ -58,7 +58,7 @@ Added additional file :Views/Shared/_ValidationScriptsPartial.cshtml
 RunTime 00:00:18.13
 ```
 
-We need to wire up support for ASP.NET MVC Controllers and Views by calling 
+We need to wire up support for ASP.NET MVC Controllers and Views by calling
 
 ```csharp
 builder.Services.AddControllersWithViews();
@@ -75,7 +75,7 @@ The whole `Program.cs` should look like this:
 ```csharp
 // Rockaway.WebApp/Program.cs
 
-{% include_relative examples/302/Rockaway/Rockaway.WebApp/Program.cs %}
+{% include_relative examples/302/Rockaway.WebApp/Program.cs %}
 ```
 
 Finally, **delete Artists.cshtml and Artists.cshtml.cs**: if the old page still exists, ASP.NET isn't going to route requests to our new controller properly.

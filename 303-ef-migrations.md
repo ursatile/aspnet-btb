@@ -29,7 +29,7 @@ We'll create an extension class to manage our hosting configuration:
 ```csharp
 // Rockaway.WebApp/Hosting/HostEnvironmentExtensions.cs
 
-{% include_relative examples/303/Rockaway/Rockaway.WebApp/Hosting/HostEnvironmentExtensions.cs %}
+{% include_relative examples/303/Rockaway.WebApp/Hosting/HostEnvironmentExtensions.cs %}
 ```
 
 Now we need to modify `Program.cs` to pick up our new configuration:
@@ -37,13 +37,13 @@ Now we need to modify `Program.cs` to pick up our new configuration:
 ```csharp
 // Rockaway.WebApp/Program.cs
 
-{% include_relative examples/303/Rockaway/Rockaway.WebApp/Program.cs %}
+{% include_relative examples/303/Rockaway.WebApp/Program.cs %}
 ```
 
 We also need to add a connection string, which we'll put in `appsettings.Staging.json` so that it's only picked up when we're running in `Staging` environment. We're using `AZURE_SQL_CONNECTIONSTRING` as the name of our connection string because it'll make things a little easier in the next step.
 
 ```json
-{% include_relative examples/303/Rockaway/Rockaway.WebApp/appsettings.Staging.json %}
+{% include_relative examples/303/Rockaway.WebApp/appsettings.Staging.json %}
 ```
 
 And, of course, you'll need a database to connect to. See [SQL Server on Docker](sql-server-on-docker.html) for notes on running SQL Server using Docker.
@@ -84,7 +84,7 @@ OK - we have a database, but no tables. Let's create them.
 >         | __|| __|  |  )   \\\
 >         | _| | _|   \_/ |  //|\\
 >         |___||_|       /   \\\/\\
-> 
+>
 > Entity Framework Core .NET Command-line Tools 8.0.1
 > ```
 >
@@ -116,7 +116,7 @@ Now we can update `RockawayDbContext`:
 ```csharp
 // Rockaway.WebApp/Data/RockawayDbContext.cs
 
-{% include_relative examples/303/Rockaway/Rockaway.WebApp/Data/RockawayDbContext.cs %}
+{% include_relative examples/303/Rockaway.WebApp/Data/RockawayDbContext.cs %}
 ```
 
 and create our migration again:
