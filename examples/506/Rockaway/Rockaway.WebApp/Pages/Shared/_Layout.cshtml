@@ -1,0 +1,34 @@
+@{ Layout = "_Base"; }
+
+@section head {
+	@await RenderSectionAsync("Head", required: false)
+}
+<header>
+	<h1>
+		<a asp-area="" asp-page="/Index" asp-page="/Index">Rockaway</a>
+	</h1>
+	<label id="nav-toggle" for="nav-checkbox"><i class="fa-solid fa-bars"></i></label>
+	<input type="checkbox" id="nav-checkbox" />
+	<nav>
+		<a asp-action="Index" asp-controller="Artists">Artists</a>
+		<a asp-action="Index" asp-controller="Venues">Venues</a>
+	</nav>
+</header>
+<main>
+	@RenderBody()
+</main>
+<footer>
+	<span>
+		&copy; 2024 Rockaway <a id="admin-login" href="/admin">admin login</a>
+	</span>
+	<nav>
+		<a asp-page="/about">about us</a>
+		<a asp-page="/contact">contact us</a>
+		<a asp-page="/privacy">privacy policy</a>
+		<a asp-page="/terms">terms &amp; conditions</a>
+		<a href="/status">system status</a>
+	</nav>
+</footer>
+@section scripts {
+	@await RenderSectionAsync("Scripts", required: false)
+}

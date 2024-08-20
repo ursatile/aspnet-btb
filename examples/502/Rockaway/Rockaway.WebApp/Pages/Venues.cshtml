@@ -1,0 +1,9 @@
+@page
+@model VenuesModel
+
+<h1>Venues</h1>
+<ol>
+	@foreach(var venue in Model.Venues) {
+		<li>@venue.Name</li>
+	}
+</ol>

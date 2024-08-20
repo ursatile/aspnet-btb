@@ -1,0 +1,25 @@
+@using Rockaway.RazorComponents
+@model Rockaway.WebApp.Models.ShowViewData
+@section Head {
+	<link rel="stylesheet" href="~/Rockaway.RazorComponents.styles.css" asp-append-version="true"/>
+}
+<h1>@Model.HeadlineArtistName</h1>
+<p>@Model.VenueName, @Model.VenueAddress</p>
+<p>@Model.ShowDate</p>
+
+<form method="post">
+
+@(await Html.RenderComponentAsync<TicketPicker>(RenderMode.WebAssembly, new {
+	TicketTypes = Model.TicketTypes.Select(tt => new TicketPickerItem {
+		Id = tt.Id, Name = tt.Name, Price = tt.Price
+	}).ToList(),
+	Model.CultureName
+}))
+
+<section class="row">
+	<div class="col-12 col-md-8 offset-md-2 text-end">
+		<input type="submit" class="btn btn-primary" value="Next &gt;"/>
+	</div>
+</section>
+
+</form>
