@@ -9,7 +9,7 @@
 
 <form method="post">
 
-@(await Html.RenderComponentAsync<TicketPicker>(RenderMode.WebAssembly, new {
+@(await Html.RenderComponentAsync<TicketPicker>(RenderMode.WebAssemblyPrerendered, new {
 	TicketTypes = Model.TicketTypes.Select(tt => new TicketPickerItem {
 		Id = tt.Id, Name = tt.Name, Price = tt.Price
 	}).ToList(),

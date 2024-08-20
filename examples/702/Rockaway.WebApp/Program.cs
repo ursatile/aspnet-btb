@@ -57,6 +57,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<Roc
 
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
+builder.WebHost.UseStaticWebAssets();
 
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents()
