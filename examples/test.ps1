@@ -13,10 +13,10 @@ foreach ($dir in $solutionDirectories) {
 
     # Run dotnet clean, build, and test
     Write-Host "Running dotnet clean..."
-    dotnet clean
+    dotnet clean --verbosity quiet
 
     Write-Host "Running dotnet build..."
-    dotnet build
+    dotnet build --verbosity quiet
 
     Write-Host "Running dotnet test..."
     dotnet test
