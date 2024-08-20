@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "editorconfig.md",
+                "file": "dylans-notes 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3748eed293ee86d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "dylans-notes 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "editorconfig.md",
+                "file": "dylans-notes 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "editorconfig.md",
+                "file": "dylans-notes 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "editorconfig.md"
+                "file": "dylans-notes 1.md"
               }
             }
           }
@@ -146,8 +159,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6d0b754aef6d56aa",
+  "active": "3748eed293ee86d7",
   "lastOpenFiles": [
+    "index.md",
+    "dylans-notes 1.md",
+    "dylans-notes 1 1.md",
+    "_site/dylans-notes 1 1.html",
+    "_site/dylans-notes 1.html",
+    "dylans-notes.md",
+    "editorconfig.md",
+    "examples/zip.cmd",
+    "examples/clean.cmd",
     "examples/create-rockaway-database.sql",
     "examples/editorconfig",
     "101-up-and-running-with-rockaway.md",
@@ -157,7 +179,6 @@
     "examples",
     "New folder",
     "Untitled.md",
-    "index.md",
     "README.md",
     "images/venues/electric-brixton.jpg",
     "images/venues/bataclan.webp",
@@ -171,11 +192,6 @@
     "images/unsplash/unicoder.jpg",
     "images/venues",
     "images/unsplash",
-    "images/506-shows-and-tour-dates",
-    "images/103-introducing-mvc",
-    "images/02-introducing-entity-framework",
-    "images",
-    "examples/701/Rockaway/Rockaway.WebApp.Tests/obj/Release/net8.0/Rockaway.WebApp.Tests.GeneratedMSBuildEditorConfig.editorconfig",
     "examples/505/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/502/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/504/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
@@ -189,10 +205,6 @@
     "examples/301/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/303/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/305/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/304/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/302/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/201/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/300/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/202/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
+    "examples/304/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
   ]
 }
