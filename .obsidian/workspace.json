@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "101-testing-aspnet-web-apps 1.md",
+                "file": "202-minimal-apis.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7931ec20a6d4415a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "301-introducing-ef-core.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "101-testing-aspnet-web-apps 1.md",
+                "file": "301-introducing-ef-core.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "101-testing-aspnet-web-apps 1.md",
+                "file": "301-introducing-ef-core.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "101-testing-aspnet-web-apps 1.md"
+                "file": "301-introducing-ef-core.md"
               }
             }
           }
@@ -159,8 +171,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2dc20eea59a0e054",
+  "active": "9fcca69794b13673",
   "lastOpenFiles": [
+    "302-asp-net-mvc.md",
+    "303-ef-migrations.md",
+    "304-deploying-migrations 1.md",
+    "303-ef-migrations 1.md",
+    "301-introducing-ef-core.md",
+    "202-minimal-apis 1.md",
+    "images/304-deploying-migrations.md",
+    "images/303-ef-migrations.md",
+    "304-deploying-migrations.md",
+    "_site/202-minimal-apis 1.html",
+    "202-minimal-apis.md",
     "201-running-aspnet-on-azure.md",
     "102-shouldly-and-anglesharp.md",
     "101-testing-aspnet-web-apps 1.md",
@@ -172,13 +195,11 @@
     "dylans-notes 1.md",
     "dylans-notes 1 1.md",
     "dylans-notes.md",
-    "202-minimal-apis.md",
     "examples/102/Rockaway.WebApp.Tests/bin/Debug/net8.0/Rockaway.WebApp.deps.json",
     "examples/102/Rockaway.WebApp.Tests/obj/Debug/net8.0/ref/Rockaway.WebApp.Tests.dll",
     "examples/102/Rockaway.WebApp.Tests/obj/Debug/net8.0/Rockaway.WebApp.Tests.genruntimeconfig.cache",
     "examples/102/Rockaway.WebApp.Tests/bin/Debug/net8.0/appsettings.json",
     "examples/102/Rockaway.WebApp.Tests/obj/Debug/net8.0/Rockaway.WebApp.Tests.csproj.CopyComplete",
-    "examples/102/Rockaway.WebApp.Tests/bin/Debug/net8.0/fa/Humanizer.resources.dll",
     "examples/102/Rockaway.WebApp.Tests/bin/Debug/net8.0/EmptyFiles/image/empty.webp",
     "examples/102/Rockaway.WebApp.Tests/bin/Debug/net8.0/EmptyFiles/image/empty.png",
     "examples/201/Rockaway.WebApp.Tests/bin/Debug/net8.0/EmptyFiles/image/empty.bmp",
@@ -197,14 +218,6 @@
     "examples/101 - Copy/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/101/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/100 - Copy/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/100/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "README.md",
-    "index.md",
-    "editorconfig.md",
-    "101-up-and-running-with-rockaway.md",
-    "001-introduction.md",
-    "801-aspire-dashboard.md",
-    "Untitled.md",
-    "examples/505/Rockaway/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
+    "examples/100/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
   ]
 }

@@ -29,15 +29,10 @@ We'll create a test which verifies that our homepage has the proper `<title>` el
 {% include_relative examples/102/Rockaway.WebApp.Tests/Pages/PageTests.cs %}
 ```
 
-## Exercises
+### Exercise: Testing the "Contact Us" page
 
-#### Add a "Contact Us" page
-
-1. Create a "Contact Us" page as part of the Rockaway web application.
-2. Create a test that verifies that the Contact Us page URL returns a successful response
-3. Create a test that verifies that the Contact Us page has the correct page title **Contact Us**
-
-#### Extra Credit
+1. Create a test that verifies that the Contact Us page URL returns a successful response
+2. Create a test that verifies that the Contact Us page has the correct page title **Contact Us**
 
 How would you verify that the Contact Us page includes the correct email address and telephone number?
 

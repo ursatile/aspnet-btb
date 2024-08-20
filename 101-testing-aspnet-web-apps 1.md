@@ -83,7 +83,7 @@ Delete `UnitTest1.cs`, and create a new file.
 Now run our test with `dotnet test` and verify that is passes.
 ### Exercise
 
-Our app includes  pages in our sample app - `/privacy` 
+There are two more pages in our sample app - `/privacy` and `/contact`
 
 Add page tests that verify both of these pages return a success status code.
 
