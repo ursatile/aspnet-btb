@@ -173,6 +173,8 @@
   },
   "active": "7931ec20a6d4415a",
   "lastOpenFiles": [
+    "examples/email-example.mjml",
+    "examples/email-example.html",
     "506-shows-and-tour-dates.md",
     "507-venue-cultures.md",
     "508-tickets-and-prices.md",
@@ -191,7 +193,6 @@
     "examples/305/Rockaway.WebApp.Tests/bin/Release/net8.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll",
     "examples/305/Rockaway.WebApp.Tests/bin/Release/net8.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll",
     "examples/305/Rockaway.WebApp.Tests/bin/Release/net8.0/runtimes/browser-wasm/nativeassets/net8.0/e_sqlite3.a",
-    "examples/305/Rockaway.WebApp.Tests/bin/Debug/net8.0/runtimes/win/lib/net7.0/System.Windows.Extensions.dll",
     "examples/305/Rockaway.WebApp.Tests/bin/Release/net8.0/EmptyFiles/image/empty.webp",
     "examples/305/Rockaway.WebApp.Tests/bin/Release/net8.0/EmptyFiles/image/empty.png",
     "examples/305/Rockaway.WebApp.Tests/bin/Release/net8.0/EmptyFiles/image/empty.jpg",
@@ -217,7 +218,6 @@
     "examples/509/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/508/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
     "examples/507/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/506/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md",
-    "examples/505/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
+    "examples/506/Rockaway.WebApp/wwwroot/lib/jquery-validation/LICENSE.md"
   ]
 }
