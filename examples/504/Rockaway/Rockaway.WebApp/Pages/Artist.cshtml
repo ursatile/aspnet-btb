@@ -1,0 +1,11 @@
+@page "/artist/{slug}"
+@model ArtistModel
+<article class="row">
+	<section class="col-12 col-md-4">
+		@Html.DisplayFor(model => model.Artist)
+	</section>
+	<section class="col-12 col-md-8">
+		<h2>@Model.Artist.Name On Tour</h2>
+		<p><em>TODO: List tour dates here</em></p>
+	</section>
+</article>

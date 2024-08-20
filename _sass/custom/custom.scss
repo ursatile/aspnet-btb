@@ -1,0 +1,69 @@
+@use '../fontawesome/css/all.min.css';
+
+a.site-title {
+  font-size: 14px !important;
+  font-weight: bold;
+}
+
+div.download-link {
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #7253ed;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  margin: 16px 0;
+}
+
+div.highlight {
+  font-size: 14px;
+
+  code {
+    tab-size: 2;
+    font-size: inherit;
+  }
+}
+
+ul#index-nav {
+  list-style-type: none;
+
+  li::before {
+    content: none;
+  }
+
+  padding: 0;
+  margin: 0;
+
+  a {
+    font-weight: bold;
+  }
+
+  p {
+    padding-left: 20px;
+  }
+}
+
+.main-content {
+  figcaption {
+    text-align: center;
+    font-size: 80%;
+    margin-top: -10px;
+  }
+  p.note::before {
+    color: #2c84fa;
+    content: "\f05a";
+    font-family: "Font Awesome 6 Pro";
+    display: inline;
+    font-size: 150%;
+    margin-right: 8px;
+  }
+
+  h2 {
+    margin-top: 0;    
+  }
+
+  .fa-circle-info {
+    color: #005eff;
+    font-size: 120%;
+  }
+}

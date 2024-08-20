@@ -1,0 +1,50 @@
+title: Modern Web Development with C# and .NET
+description: The online handbook for Dylan Beattie's workshop on modern web development with C# and .NET
+theme: just-the-docs
+
+url: https://ursatile.github.io/mwnet
+
+aux_links:
+  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+callouts_level: loud
+callouts:
+  question:
+    color: green
+    title: Question
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: purple
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: blue
+  warning:
+    title: Warning
+    color: red
+
+plugins:
+  - jemoji
+
+exclude:
+  - excluded/
+  - .git
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - node_modules/
+  - examples/_NCrunch_examples/
+  - examples/**/.vs
+  - examples/**/obj
+  - examples/**/bin
+  - examples/**/_NCrunch*/

@@ -1,2 +1,1 @@
-# aspnet-btb
-ASP.NET Beyond the Basics
+This is the README. Yeah boi.
