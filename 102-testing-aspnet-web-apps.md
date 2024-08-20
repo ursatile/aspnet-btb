@@ -8,7 +8,6 @@ summary: "In this module, we'll meet the WebApplicationFactory and learn how to 
 previous: mwnet101
 complete: mwnet102
 ---
-
 In the previous module, we created an xUnit test project, and ran it, and it passed -- awesome! But what were we actually testing?
 
 ```csharp

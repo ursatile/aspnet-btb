@@ -5,7 +5,6 @@ nav_order: 10000
 typora-copy-images-to: ./images
 summary: "Introduction - why .NET, why C#, choosing a .NET version. The scenario: selling tickets for rock concerts."
 ---
-
 ## Introduction
 
 In this workshop, we're going to use .NET 8, C# and ASP.NET Core to build a web application for selling tickets to rock concerts.
