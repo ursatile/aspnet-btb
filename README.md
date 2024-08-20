@@ -1,5 +1,3 @@
-This is the README. Yeah boi.
-
 OK, structure
 
 Monday AM
