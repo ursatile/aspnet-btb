@@ -1,7 +1,7 @@
 ---
-title: 1.3 Shouldly and AngleSharp
+title: Shouldly and AngleSharp
 layout: module
-nav_order: 10103
+nav_order: 10102
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: "In this module we cover some more advanced test patterns you can use with the WebApplicationFactory, and two of my favourite NuGet packages - Shouldly and AngleSharp."
@@ -18,7 +18,7 @@ dotnet add Rockaway.WebApp.Tests package AngleSharp
 
 #### Scenario
 
-We need to modify the `<title>` element of our pages: 
+We need to modify the `<title>` element of our pages:
 
 * Any page which does not set `ViewData["Title"]` should have the title **Rockaway**
 * Individual pages should be able to override this by setting `ViewData["Title"]`
