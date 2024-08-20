@@ -14,6 +14,7 @@ Monday AM
 * Deploy to Azure
 * BOOM we're in the cloud (but with Sqlite database... oops)
 * SQL migration runner
+* Get a real database up and running
 
 Monday PM: make it look nice
 
@@ -24,4 +25,8 @@ Monday PM: make it look nice
 * Razor Components 
 
 Tuesday AM: MJML and email
+
+* Architecture: components, dependencies, break it out into pieces
+* Aspire and OTEL
+* 
 
