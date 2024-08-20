@@ -12,5 +12,15 @@ Monday AM
 * Add some AngleSharp tests
 * Add the status endpoint
 * Deploy to Azure
+* BOOM we're in the cloud (but with Sqlite database... oops)
+* SQL migration runner
+
+Monday PM: make it look nice
+
+* Customise boostrap
+* Tag helpers
+* Razor Components
+* 
+* 
 * 
 * 
