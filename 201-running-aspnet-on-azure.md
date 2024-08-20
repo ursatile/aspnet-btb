@@ -5,8 +5,8 @@ nav_order: 10201
 typora-root-url: ./
 typora-copy-images-to: ./images
 summary: "In this module, we'll deploy our ASP.NET Core web application to Microsoft Azure using GitHub Actions"
-previous: mwnet200
-complete: mwnet201
+previous: 102
+complete: 201
 ---
 
 We've got a web app, it's got at least two pages, and we have some tests that prove our pages are working. Time to...
@@ -18,7 +18,7 @@ We've got a web app, it's got at least two pages, and we have some tests that pr
 </div>
 OK, let's create a new app on Windows Azure, and set up a CI pipeline that'll use GitHub Actions to deploy our app every time we push any changes to our main branch.
 
-First, we'll create a new resource. From the Azure portal, click "Create a Resource", 
+First, we'll create a new resource. From the Azure portal, click "Create a Resource",
 
 ![image-20231013175135911](images/image-20231013175135911.png)
 
@@ -87,7 +87,7 @@ We also need to change our publish step to specify the `Rockaway.WebApp` project
   run: dotnet publish Rockaway.WebApp -c Release -o ${{env.DOTNET_ROOT}}/myapp
 ```
 
-> GitHub Actions steps are all relative to the root folder of the cloned repo, so if your solution file is in e.g. `src/Rockaway/Rockaway.sln`, you'll need to specify this folder in your build steps:
+> GitHub Actions steps are all relative to the root folder of the cloned repo, so if your solution file is in e.g. `src/Rockaway.sln`, you'll need to specify this folder in your build steps:
 >
 > ```yaml
 > run: dotnet build src/Rockaway

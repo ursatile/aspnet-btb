@@ -30,24 +30,24 @@ First we'll create an interface for our status reporter service, an implementati
 
 ```csharp
 // Rockaway.WebApp/Services/IStatusReporter.cs
-{% include_relative examples/202/Rockaway/Rockaway.WebApp/Services/IStatusReporter.cs %}
+{% include_relative examples/202/Rockaway.WebApp/Services/IStatusReporter.cs %}
 ```
 
 ```csharp
 // Rockaway.WebApp/Services/StatusReporter.cs
-{% include_relative examples/202/Rockaway/Rockaway.WebApp/Services/StatusReporter.cs %}
+{% include_relative examples/202/Rockaway.WebApp/Services/StatusReporter.cs %}
 ```
 
 ```csharp
 // Rockaway.WebApp/Services/ServerStatus.cs
-{% include_relative examples/202/Rockaway/Rockaway.WebApp/Services/ServerStatus.cs %}
+{% include_relative examples/202/Rockaway.WebApp/Services/ServerStatus.cs %}
 ```
 
 Minimal APIs can accept a service, like an instance of `IStatusReporter`, as an input, but we need to register the service to make this work.
 
 ```csharp
 // Rockaway.WebApp/Program.cs
-{% include_relative examples/202/Rockaway/Rockaway.WebApp/Program.cs %}
+{% include_relative examples/202/Rockaway.WebApp/Program.cs %}
 ```
 
 Now if we load `/status` in a browser, we can see a few useful bits of information:
@@ -123,7 +123,7 @@ public async Task Status_Endpoint_Returns_Status() {
 }
 ```
 
-> Note the `status.ShouldBeEquivalentTo()` method we're calling here; this is a `Shouldly` method which compares object graphs, checking that every property on one object is equal to the corresponding property on another; it's ideal for this kind of scenario. 
+> Note the `status.ShouldBeEquivalentTo()` method we're calling here; this is a `Shouldly` method which compares object graphs, checking that every property on one object is equal to the corresponding property on another; it's ideal for this kind of scenario.
 
 ## Exercise: Add Uptime
 

@@ -27,7 +27,7 @@ We need to modify the `<title>` element of our pages:
 We'll create a test which verifies that our homepage has the proper `<title>` element. We'll use the `WebApplicationFactory` to retrieve the page's HTML, and then use `AngleSharp` to extract the right element and `Shouldly` to assert that it has the right value. We can also use xUnit's `[InlineData]` attribute to apply the same test to multiple pages. Say we want to confirm that multiple pages on our site have the correct `<title>` tags.
 
 ```csharp
-{% include_relative examples/102/Rockaway/Rockaway.WebApp.Tests/Pages/PageTests.cs %}
+{% include_relative examples/102/Rockaway.WebApp.Tests/Pages/PageTests.cs %}
 ```
 
 ## Exercises
