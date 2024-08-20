@@ -17,10 +17,11 @@ Monday AM
 
 Monday PM: make it look nice
 
-* Customise boostrap
+* Customise bootstrap
+* Responsive layouts
 * Tag helpers
-* Razor Components
-* 
-* 
-* 
-* 
+* Image gallery
+* Razor Components 
+
+Tuesday AM: MJML and email
+
