@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we learn how to use .NET's built-in localisation support to format prices in local currency."
 previous: rockaway506
 complete: rockaway507
-examples: examples/507/Rockaway
+examples: examples/507
 migration: ReplaceCountryCodeWithCultureName
 ---
 

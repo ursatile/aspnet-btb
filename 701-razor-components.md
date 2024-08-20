@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll build an interactive TicketPicker using Razor Components - a way to build reusable, interactive controls and components without writing JavaScript."
 previous: rockaway602
 complete: rockaway701
-examples: examples/701/Rockaway
+examples: examples/701
 ---
 
 Let's upgrade our ticket picker.

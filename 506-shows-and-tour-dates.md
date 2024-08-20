@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll see how to add shows to our application data model."
 previous: rockaway505
 complete: rockaway506
-examples: examples/506/Rockaway
+examples: examples/506
 migration: AddShowsAndSupportSlots
 ---
 

@@ -124,7 +124,7 @@ Monday:
 
 13:30-15:00 Style up the frontend, SASS, responsive navigation
 
-15:30-17:00 
+15:30-17:00
 
 
 
@@ -273,7 +273,7 @@ Exercises
 
 ## END OF PART ONE
 
-### Part 2: ASP.NET MVC and Entity Framework, DbContext, 
+### Part 2: ASP.NET MVC and Entity Framework, DbContext,
 
 Milestone: /artists - a list of artists
 
@@ -284,7 +284,7 @@ builder.Services.AddControllersWithViews();
 
 app.MapControllerRoute(
 	name: "default",
-	pattern: "{controller=Home}/{action=Index}/{id?}");	
+	pattern: "{controller=Home}/{action=Index}/{id?}");
 ```
 
 Plug in EF Core. We're going to install versions for both SQL Server and Sqlite:
@@ -308,7 +308,7 @@ public class Artist {
 
 	[MaxLength(100)]
 	[Unicode(false)]
-    [RegularExpression("^[a-z0-9-]{2,100}", 
+    [RegularExpression("^[a-z0-9-]{2,100}",
 		ErrorMessage = "Slug must be 2-100 characters and contain only a-z, 0-9 and hyphen (-) characters")]
 	public string Slug { get; set; } = String.Empty;
 
@@ -428,9 +428,9 @@ Solution: Sample Data
 
   * Make the Slug property unique
 
-  
 
-  
+
+
 
 While we're here, let's add /Artists and /Venues to the site navigation menu in _Layout.cshtml
 
@@ -907,7 +907,7 @@ STILL TO DO
 
 set up fancy-panel
 
-add PT Sans Narrow 
+add PT Sans Narrow
 
 ```
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
@@ -989,7 +989,7 @@ Add the Area attribute:
 ```
 using Microsoft.AspNetCore.Mvc;
 
-namespace Rockaway.WebApp.Areas.Admin.Controllers; 
+namespace Rockaway.WebApp.Areas.Admin.Controllers;
 
 [Area("admin")]
 public class HomeController : Controller {

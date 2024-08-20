@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll learn how to render HTML and text emails using ASP.NET, Razor, and the Mailjet Markup Language (MJML)."
 previous: rockaway508
 complete: rockaway601
-examples: examples/601/Rockaway
+examples: examples/601
 ---
 
 We've chosen our tickets, we've entered our details... this is the part where we get the confirmation email, right? And, because we want to look like we know what we're doing, the email should probably have a nicely-formatted HTML version with some colors and pictures and stuff -- and because accessibility is a thing, we probably also need a clean, readable plain text version.

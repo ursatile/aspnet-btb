@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll build the second part of the customer checkout process, confirming a customer's order and asking them to enter their name and email address."
 previous: rockaway509
 complete: rockaway510
-examples: examples/510/Rockaway
+examples: examples/510
 ---
 
 In the last module, we created a simple ticket picker, and when it was submitted, added a `TicketOrder` to the database.

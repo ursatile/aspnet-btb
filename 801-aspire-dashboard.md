@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll configure our web app to run under ASP.NET Aspire, and add OpenTelemetry so we can use the Aspire dashboard to see what our requests are doing."
 previous: rockaway702
 complete: rockaway801
-examples: examples/801/Rockaway
+examples: examples/801
 ---
 
 First, we'll create a new app host project, and add it to our solution:

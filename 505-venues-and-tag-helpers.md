@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we learn about ASP.NET TagHelpers and use them to enhance our venue listing page by drawing country flags for each venue."
 previous: rockaway504
 complete: rockaway505
-examples: "examples/505/Rockaway"
+examples: "examples/505"
 ---
 
 ## Introducing ASP.NET TagHelpers

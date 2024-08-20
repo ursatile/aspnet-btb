@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll learn how to use Mailkit and Mimekit to send email from an ASP.NET web application, and how to test email delivery using tools like Papercut and MailTrap."
 previous: rockaway601
 complete: rockaway602
-examples: examples/602/Rockaway
+examples: examples/602
 ---
 
 In the last module, we rendered text and HTML versions of our order confirmation email. Now we need to actually send it.

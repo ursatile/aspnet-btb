@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll create the classes and tables we'll use to store a customer's ticket selection in the database."
 previous: rockaway508
 complete: rockaway509
-examples: examples/509/Rockaway
+examples: examples/509
 migration: AddTicketOrdersAndTicketOrderItems
 ---
 

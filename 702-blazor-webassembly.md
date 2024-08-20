@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll turn our Razor Component into a standalone project which we can deploy using Blazor and web assembly to create interactive controls which don't rely on a network connection."
 previous: rockaway701
 complete: rockaway702
-examples: examples/702/Rockaway
+examples: examples/702
 ---
 
 In the last module, we created an interactive `TicketPicker`, a Razor component that provides immediate feedback and a rich client experience when customers are selecting gig tickets.

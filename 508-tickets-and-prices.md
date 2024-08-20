@@ -7,7 +7,7 @@ typora-copy-images-to: ./images
 summary: "In this module, we'll add tickets and ticket prices to our domain model, and build a page where customers can select the tickets they want to order."
 previous: rockaway507
 complete: rockaway508
-examples: examples/508/Rockaway
+examples: examples/508
 migration: AddTicketTypes
 ---
 
