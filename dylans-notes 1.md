@@ -1,7 +1,7 @@
 ---
 title: Dylan's Notes
 layout: home
-nav_order: 101
+nav_order: 99999
 typora-copy-images-to: ./images
 summary: Dylan's notes and scribblings from workshop prep
 ---
