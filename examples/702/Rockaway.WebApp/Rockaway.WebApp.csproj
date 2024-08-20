@@ -41,4 +41,7 @@
 	<ItemGroup>
 		<InternalsVisibleTo Include="Rockaway.WebApp.Tests" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\Rockaway.RazorComponents\Rockaway.RazorComponents.csproj" />
+	</ItemGroup>
 </Project>

@@ -1,3 +1,4 @@
+@using System.Globalization
 <section class="row">
 	<div class="col-6 col-md-4 offset-md-2">
 		<strong>Ticket Type</strong>
@@ -22,7 +23,7 @@
 			<a class="fas fa-square-plus" @onclick="() => Increment(tt.Id)"></a>
 		</div>
 		<div class="col-3 col-md-2">
-			@Format(LineTotal(tt))
+			@Format(LineTotal(tt.Id))
 		</div>
 	</section>
 }
@@ -42,30 +43,35 @@
 </section>
 
 @code {
-
-	[Parameter]
-	public List<TicketTypeViewData> TicketTypes {
-		get => ticketTypes;
-		set {
-			ticketTypes = value;
-			quantities = ticketTypes.ToDictionary(tt => tt.Id, _ => 0);
-		}
-	}
-
-	[Parameter]
-	public string CultureName {
-		get => cultureInfo.Name;
-		set => cultureInfo = CultureInfo.CreateSpecificCulture(value);
-	}
-
 	private Dictionary<Guid, int> quantities = new();
-	private List<TicketTypeViewData> ticketTypes = [];
-	private CultureInfo cultureInfo = CultureInfo.InvariantCulture;
+	private Dictionary<Guid, decimal> prices = new();
 
 	private void Increment(Guid id) => quantities[id] = Math.Min(quantities[id] + 1, 8);
 	private void Decrement(Guid id) => quantities[id] = Math.Max(quantities[id] - 1, 0);
 
-	decimal LineTotal(TicketTypeViewData tt) => quantities[tt.Id] * tt.Price;
+	private List<TicketPickerItem> ticketTypes = [];
+
+	[Parameter]
+	public List<TicketPickerItem> TicketTypes {
+		get => ticketTypes;
+		set {
+			ticketTypes = value;
+			quantities = ticketTypes.ToDictionary(tt => tt.Id, _ => 0);
+			prices = ticketTypes.ToDictionary(tt => tt.Id, tt => tt.Price);
+		}
+	}
+
+	decimal LineTotal(Guid id) => quantities.GetValueOrDefault(id, 0) * prices.GetValueOrDefault(id, 0.0m);
 	string Format(decimal price) => price.ToString("C", cultureInfo);
+
+	private CultureInfo cultureInfo = CultureInfo.InvariantCulture;
+
+	[Parameter]
+	public string CultureName {
+		get => cultureInfo.Name;
+		set {
+			if (value != cultureInfo.Name) cultureInfo = CultureInfo.CreateSpecificCulture(value);
+		}
+	}
 	private decimal OrderTotal => ticketTypes.Sum(tt => tt.Price * quantities[tt.Id]);
 }
