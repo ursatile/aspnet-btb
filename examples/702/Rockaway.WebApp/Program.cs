@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.Sqlite;
 using Mjml.Net;
 using RazorEngineCore;
+using Rockaway.RazorComponents;
 using Rockaway.WebApp.Data;
 using Rockaway.WebApp.Hosting;
 using Rockaway.WebApp.Services;
 using Rockaway.WebApp.Services.Mail;
-using Rockaway.WebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
