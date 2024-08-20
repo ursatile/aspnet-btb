@@ -44,7 +44,7 @@ public class RockawayDbContext(DbContextOptions<RockawayDbContext> options)
 Create `/Pages/Shared/_LoginPartial.cshtml`:
 
 ```html
-{% include_relative examples/401/Rockaway/Rockaway.WebApp/Pages/Shared/_LoginPartial.cshtml %}
+{% include_relative examples/401/Rockaway.WebApp/Pages/Shared/_LoginPartial.cshtml %}
 ```
 
 Add `_LoginPartial` to `_Layout.cshtml`, just after the `<ul>` inside the page navigation:
@@ -88,7 +88,7 @@ To add a sample user:
 ```csharp
 // Rockaway.WebApp/Data/Sample/SampleData.Users.cs
 
-{% include_relative examples/401/Rockaway/Rockaway.WebApp/Data/Sample/SampleData.Users.cs %}
+{% include_relative examples/401/Rockaway.WebApp/Data/Sample/SampleData.Users.cs %}
 ```
 
 and then at the end of `RockawayDbContext.OnModelBuilding`, add:

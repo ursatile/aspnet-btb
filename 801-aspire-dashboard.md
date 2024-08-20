@@ -58,7 +58,7 @@ app.Run();
 Update `Rockaway.AppHost/Program.cs`:
 
 ```csharp
-{% include_relative examples/801/Rockaway/Rockaway.AppHost/Program.cs %}
+{% include_relative examples/801/Rockaway.AppHost/Program.cs %}
 ```
 
 Make sure Docker or Podman is running, then start the solution:

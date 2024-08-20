@@ -25,7 +25,7 @@ To accomplish this, we'll introduce a new class, `ArtistViewData`, which is desi
 ```csharp
 // Rockaway.WebApp/Models/ArtistViewData.cs
 
-{% include_relative examples/504/Rockaway/Rockaway.WebApp/Models/ArtistViewData.cs %}
+{% include_relative examples/504/Rockaway.WebApp/Models/ArtistViewData.cs %}
 ```
 
 > There's a method here which will take a width and a height and return a Cloudinary URL. Cloudinary ([cloudinary.com](https://cloudinary.com)) is a cloud image hosting service that provides all sorts of cool features, like dynamic image resizing and format conversion. I've uploaded free images from Unsplash to a Cloudinary bucket for use in this workshop, but they have a free tier if you want to upload your own images and play around with their settings.
@@ -38,13 +38,13 @@ Create a new file at `/Pages/Shared/DisplayTemplates/ArtistViewData.cshtml`:
 
 ```html
 {% include_relative
-examples/504/Rockaway/Rockaway.WebApp/Pages/Shared/DisplayTemplates/ArtistViewData.cshtml %}
+examples/504/Rockaway.WebApp/Pages/Shared/DisplayTemplates/ArtistViewData.cshtml %}
 ```
 
 Now we'll modify `/Pages/Artists.cshtml` to use our display template:
 
 ```html
-{% include_relative examples/504/Rockaway/Rockaway.WebApp/Pages/Artists.cshtml %}
+{% include_relative examples/504/Rockaway.WebApp/Pages/Artists.cshtml %}
 ```
 
 We'll also create some new CSS rules to control the layout of our artist gallery.
@@ -145,13 +145,13 @@ In the arist card, we added a hyperlink using this syntax:
 At the moment, that doesn't go anywhere - so let's create the page it will link to:
 
 ```html
-{% include_relative examples/504/Rockaway/Rockaway.WebApp/Pages/Artist.cshtml %}
+{% include_relative examples/504/Rockaway.WebApp/Pages/Artist.cshtml %}
 ```
 
 and the corresponding code-behind file:
 
 ```csharp
-{% include_relative examples/504/Rockaway/Rockaway.WebApp/Pages/Artist.cshtml.cs %}
+{% include_relative examples/504/Rockaway.WebApp/Pages/Artist.cshtml.cs %}
 ```
 
 

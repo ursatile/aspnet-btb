@@ -11,7 +11,7 @@ complete: rockaway501
 
 Before we start changing our frontend look and feel, let's create a page which uses all the elements we're going to be using in our app. This gives us a really easy way to check everything works, test responsive designs across multiple devices, and validate changes to our HTML and CSS.
 
-We'll create `/Pages/Elements.cshtml` - you can find the code for this page here: **[Elements.cshtml](examples/501/Rockaway/Rockaway.WebApp/Pages/Elements.cshtml)**
+We'll create `/Pages/Elements.cshtml` - you can find the code for this page here: **[Elements.cshtml](examples/501/Rockaway.WebApp/Pages/Elements.cshtml)**
 
 We'll also need to add a directive to our layout, because our elements page injects some custom CSS into the page head. Add this at the end of the `<head>` element in `_Layout.cshtml`:
 
@@ -107,7 +107,7 @@ dotnet add Rockaway.WebApp package AspNetCore.SassCompiler
 Next, based on [these instructions](https://github.com/koenvzeijl/AspNetCore.SassCompiler#examples) we're going to add SASS support to our `appsettings.json` file:
 
 ```json
-{% include_relative examples/501/Rockaway/Rockaway.WebApp/appsettings.json %}
+{% include_relative examples/501/Rockaway.WebApp/appsettings.json %}
 ```
 
 and then modify our `Program.cs` to enable the Sass Watcher component, which will rebuild our CSS whenever a .scss file is modified:
@@ -250,13 +250,13 @@ Now we're going to split our layout into a `_Base` layout, which imports CSS and
 The code for **Rockaway/Rockaway.WebApp/Pages/Shared/_Base.cshtml**:
 
 ```html
-{% include_relative examples/501/Rockaway/Rockaway.WebApp/Pages/Shared/_Base.cshtml %}
+{% include_relative examples/501/Rockaway.WebApp/Pages/Shared/_Base.cshtml %}
 ```
 
 The code for **Rockaway/Rockaway.WebApp/Pages/Shared/_Layout.cshtml**:
 
 ```html
-{% include_relative examples/501/Rockaway/Rockaway.WebApp/Pages/Shared/_Layout.cshtml %}
+{% include_relative examples/501/Rockaway.WebApp/Pages/Shared/_Layout.cshtml %}
 ```
 
 Now, rebuilt the site, open the /Elements page, and you should see basically the same layout as we had before.
@@ -267,7 +267,7 @@ ASP.NET Core allows you to add stylesheets which only affect specific parts of y
 
 There's also a Bootstrap "cheat sheet" page, which I've adapted to work with ASP.NET Core so you can see how your customisations affect various components and widgets that are provided by Bootstrap.
 
-You can find the code for`/Pages/BootstrapCheatsheet.cshtml` here: **[BootstrapCheatsheet.cshtml](examples/501/Rockaway/Rockaway.WebApp/Pages/BootstrapCheatsheet.cshtml)**
+You can find the code for`/Pages/BootstrapCheatsheet.cshtml` here: **[BootstrapCheatsheet.cshtml](examples/501/Rockaway.WebApp/Pages/BootstrapCheatsheet.cshtml)**
 
 ### Change some stuff!
 
@@ -296,7 +296,7 @@ $primary: #336699;
 The final `frontend.scss` looks like this:
 
 ```scss
-{% include_relative examples/501/Rockaway/Rockaway.WebApp/wwwroot/scss/frontend.scss %}
+{% include_relative examples/501/Rockaway.WebApp/wwwroot/scss/frontend.scss %}
 ```
 
 

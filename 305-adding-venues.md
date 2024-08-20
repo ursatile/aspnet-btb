@@ -19,10 +19,10 @@ The code for a Venue looks like this:
 ```
 // Rockaway.WebApp/Data/Entities/Venue.cs
 
-{% include_relative examples/305/Rockaway/Rockaway.WebApp/Data/Entities/Venue.cs %}
+{% include_relative examples/305/Rockaway.WebApp/Data/Entities/Venue.cs %}
 ```
 
-You'll find sample data venue here: **[SampleData.Venues.cs](examples/305/Rockaway/Rockaway.WebApp/Data/Sample/SampleData.Venues.cs)**
+You'll find sample data venue here: **[SampleData.Venues.cs](examples/305/Rockaway.WebApp/Data/Sample/SampleData.Venues.cs)**
 
 The command to scaffold the `VenuesController` is:
 
