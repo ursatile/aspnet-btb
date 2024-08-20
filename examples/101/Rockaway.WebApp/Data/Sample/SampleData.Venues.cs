@@ -36,7 +36,15 @@ public static partial class SampleData {
 			"+44 20 8469 4382", "https://www.newcrossinn.com/");
 
 		public static Venue[] AllVenues => [
-			Electric, Bataclan, Columbia, Gagarin, JohnDee, Stengade, Barracuda, PubAnchor, NewCrossInn
+			Electric,
+			Bataclan,
+			Columbia,
+			Gagarin,
+			JohnDee,
+			Stengade,
+			Barracuda,
+			PubAnchor,
+			NewCrossInn
 		];
 	}
 }
