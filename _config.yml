@@ -1,8 +1,8 @@
-title: Modern Web Development with C# and .NET
-description: The online handbook for Dylan Beattie's workshop on modern web development with C# and .NET
+title: "ASP.NET: Beyond the Basics"
+description: The online handbook for Dylan Beattie's workshop on advanced web development with C# and .NET
 theme: just-the-docs
 
-url: https://ursatile.github.io/mwnet
+url: https://ursatile.github.io/aspnet-btb
 
 aux_links:
   Template Repository: https://github.com/just-the-docs/just-the-docs-template
@@ -30,21 +30,20 @@ plugins:
   - jemoji
 
 exclude:
-  - excluded/
   - .git
-  - .sass-cache/
   - .jekyll-cache/
-  - gemfiles/
+  - .sass-cache/
+  - examples/_NCrunch_examples/
+  - examples/**/_NCrunch*/
+  - examples/**/.vs
+  - examples/**/bin
+  - examples/**/obj
+  - excluded/
   - Gemfile
   - Gemfile.lock
+  - gemfiles/
   - node_modules/
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-  - node_modules/
-  - examples/_NCrunch_examples/
-  - examples/**/.vs
-  - examples/**/obj
-  - examples/**/bin
-  - examples/**/_NCrunch*/

@@ -1,10 +1,10 @@
 ---
-title: Shouldly and AngleSharp
+title: 1.2 Shouldly and AngleSharp
 layout: module
 nav_order: 10102
 typora-root-url: ./
 typora-copy-images-to: ./images
-summary: "In this module we cover some more advanced test patterns you can use with the WebApplicationFactory, and two of my favourite NuGet packages - Shouldly and AngleSharp."
+summary: In this module we cover some more advanced test patterns you can use with the WebApplicationFactory, and two of my favourite NuGet packages - Shouldly and AngleSharp.
 previous: 101
 complete: 102
 ---
