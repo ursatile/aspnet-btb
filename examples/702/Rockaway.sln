@@ -8,6 +8,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Rockaway.WebApp.Tests", "Ro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rockaway.RazorComponents", "Rockaway.RazorComponents\Rockaway.RazorComponents.csproj", "{EF286732-9666-4681-9426-8FBD4642FE38}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorClassLibrary1", "RazorClassLibrary1\RazorClassLibrary1.csproj", "{6A2565D2-C7D0-4341-99B8-A4B845B423FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,8 +28,15 @@ Global
 		{EF286732-9666-4681-9426-8FBD4642FE38}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF286732-9666-4681-9426-8FBD4642FE38}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF286732-9666-4681-9426-8FBD4642FE38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A2565D2-C7D0-4341-99B8-A4B845B423FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A2565D2-C7D0-4341-99B8-A4B845B423FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A2565D2-C7D0-4341-99B8-A4B845B423FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A2565D2-C7D0-4341-99B8-A4B845B423FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03F78444-9728-4663-8107-E8F4FD7149D5}
 	EndGlobalSection
 EndGlobal
