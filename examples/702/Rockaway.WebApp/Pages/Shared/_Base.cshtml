@@ -10,10 +10,11 @@
 
 	<!-- add this to enable CSS isolation for Razor Components -->
 	<link rel="stylesheet" href="~/Rockaway.WebApp.styles.css" asp-append-version="true"/>
-
-	<!-- Required for Razor Component support -->
-	<base href="~/"/>
 	@await RenderSectionAsync("Head", required: false)
+
+	<base href="~/"/>
+	<component type="typeof(Microsoft.AspNetCore.Components.Web.HeadOutlet)"
+	           render-mode="ServerPrerendered" />
 </head>
 <body class="container">
 @RenderBody()
