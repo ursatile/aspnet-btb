@@ -60,15 +60,12 @@ To use the `WebAssembly` render modes, you need to ship **the entire project** t
 For projects which are 100% Blazor, this makes perfect sense -- running a Blazor app is like downloading native binaries; once you've downloaded it, everything you need is available locally so you don't need to keep making calls across the network.
 
 If you want to create reusable components that run on web assembly but which you can host inside your Razor Pages or MVC projects, things get a little more complicated. We don't want to ship a huge binary containing the whole of `Rockaway.WebApp` to our end users, so we're going to create a standalone .NET class library which contains just our Razor Components.
-
-> .NET includes a project template `razorclasslib` which is supposedly for creating Razor class libraries -- packages which can contain pages, views, Razor components, etc. At the time of writing (January 2024), the only way I could find to get a Razor class library project to expose WASM components to a normal web application was to hack the project files until it was basically a Blazor standalone project, so we're going to save ourselves some confusing hacking and use the `blazorwasm` template instead.
-
 ### Creating Rockaway.RazorComponents
 
 First we'll create the new project and add it to our solution:
 
 ``` dotnetcli
-dotnet new blazorwasm-empty -o Rockaway.RazorComponents
+dotnet new razorclasslib -o Rockaway.RazorComponents
 dotnet sln add Rockaway.RazorComponents
 ```
 
