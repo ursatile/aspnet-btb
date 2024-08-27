@@ -212,7 +212,7 @@ Then we'll create a new class `TicketOrderMailData`, which extends our existing 
 
 We'll add links to the `Areas/Admin/TicketOrders/Index.cshtml` view in the admin area to the HTML and text versions of each order email, and add a new controller action to render the previews.
 
-Add a new constructor parameter `IMailRenderer mailRenderer` to the primary constructor on `TicketOrdersController`.
+Add a new constructor parameter `IMailBodyRenderer mailRenderer` to the primary constructor on `TicketOrdersController`.
 
 Add a new action method to `TicketOrdersController`:
 
@@ -272,11 +272,11 @@ builder.Services.AddSingleton<IMjmlRenderer, MjmlRenderer>();
 
 1. Add the `Mjml.Net` NuGet package
 2. Add the `RazorEngineCore` NuGet package
-3. Create the `IMailRenderer` interface
+3. Create the `IMailBodyRenderer` interface
 4. Create the `IMailTemplateProvider` interface
 5. Create debug and release implementations of `IMailTemplateProvider`
 6. Create `MailBodyRenderer`
-7. Inject `IMailRenderer` into `TicketOrdersController` via a new constructor parameter
+7. Inject `IMailBodyRenderer` into `TicketOrdersController` via a new constructor parameter
 8. Add the new `Mail()` action  to `TicketOrdersController`
 9. Add the Emails column and links to `/Areas/Admin/Controllers/TicketOrdersController.cs`
 10. Add extra fields to `TicketOrderViewData`
