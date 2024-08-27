@@ -69,7 +69,7 @@ dotnet run --project Rockaway.AppHost
 
 
 
-![image-20240604145157931](/images/image-20240604145157931.png)
+![image-20240604145157931](images/image-20240604145157931.png)
 
 Let's add telemetry for our database queries.
 

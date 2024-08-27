@@ -14,7 +14,7 @@ In the last module, we rendered text and HTML versions of our order confirmation
 
 Here's the workflow:
 
-![mail-workflow](/images/mail-workflow.png)
+![mail-workflow](images/mail-workflow.png)
 
 In the last module we built the Renderer, Templates, MJML and RazorEngine components; now, we'll build the SmtpRelay and MailSender components.
 
@@ -79,7 +79,7 @@ By default, we'll connect to `localhost` on port 25 -- which, by a happy coincid
 
 Papercut SMTP ([https://github.com/ChangemakerStudios/Papercut-SMTP](https://github.com/ChangemakerStudios/Papercut-SMTP)) is "a 2-in-1 email viewer and built-in SMTP server". It's a Windows application that runs in your system notification area: send email to localhost on port 25, and Papercut will capture it so you can inspect it.
 
-![image-20240128020835816](/images/image-20240128020835816.png)
+![image-20240128020835816](images/image-20240128020835816.png)
 
 ## Testing email with Mailtrap
 
@@ -100,7 +100,7 @@ Sign up (they have a free tier, no credit card required - yay!), and once you've
 
 As well as previewing different email formats, Mailtrap offers spam analysis and HTML checks:
 
-![image-20240128021725390](/images/image-20240128021725390.png)
+![image-20240128021725390](images/image-20240128021725390.png)
 
 ## Configuring SMTP on Azure for production
 

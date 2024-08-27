@@ -30,7 +30,7 @@ A show is defined by an **artist** performing at a **venue** on a specific **dat
 
 The data schema for shows looks like this:
 
-![data schema diagram showing Venue, Show, Artist and SupportSlot](/images/image-20240122212658197.png)
+![data schema diagram showing Venue, Show, Artist and SupportSlot](images/image-20240122212658197.png)
 
 ### Dates, Times and DateTimes, Oh My!
 
@@ -38,7 +38,7 @@ If a show's on March 25th, in Los Angeles, and the doors open at 7pm, it's alrea
 
 The correct answer is, of course, "March 25th, don't be an idiot." (see also [relevant XKCD](https://xkcd.com/2867/))
 
-![XKCD DateTime](/images/506-shows-and-tour-dates/datetime.png)
+![XKCD DateTime](images/506-shows-and-tour-dates/datetime.png)
 
 But timezones are tricky.
 

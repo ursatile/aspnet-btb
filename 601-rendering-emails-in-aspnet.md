@@ -14,7 +14,7 @@ We've chosen our tickets, we've entered our details... this is the part where we
 
 Before we even think about actually sending the email, let's figure out what it looks like and how we're going to build it. Our designer has provided this:
 
-![image-20240127190704611](/images/rockaway-email-mockup.png)
+![image-20240127190704611](images/rockaway-email-mockup.png)
 
 ## Rendering Email with Razor and MJML
 
@@ -46,7 +46,7 @@ So, what we're going to do is embed Razor syntax in our MJML, then compile MJML 
 
 Here's the full workflow we'll end up with:
 
-![mail-workflow](/images/mail-workflow.png)
+![mail-workflow](images/mail-workflow.png)
 <!--
 Controller->MailSender: SendOrderConfirmation(order)
 MailSender->Renderer: RenderHtml(order)

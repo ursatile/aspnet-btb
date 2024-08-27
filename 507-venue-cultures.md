@@ -144,5 +144,5 @@ and make the corresponding changes to the `Down()` method in case the migration 
 
 Apply the migration, and then check our `Venue` page to make sure it worked -- if we see the right country flags, we're all good:
 
-![image-20240122230803623](/images/image-20240122230803623.png)
+![image-20240122230803623](images/image-20240122230803623.png)
 

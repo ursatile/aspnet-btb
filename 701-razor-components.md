@@ -14,7 +14,7 @@ Let's upgrade our ticket picker.
 
 At the moment, it looks like this:
 
-![image-20240128022308557](/images/image-20240128022308557.png)
+![image-20240128022308557](images/image-20240128022308557.png)
 
 Wouldn't it be cool if, instead of typing numbers in the boxes, you could use little plus/minus buttons to add and remove tickets? And get realtime feedback on the total price of your order - in the right currency, properly formatted?
 
@@ -116,5 +116,5 @@ To add scoped CSS support to our app, add a line to the `<head>` of `_Base.cshtm
 
 Scoped CSS adds a randomly generated HTML attribute to every element rendered by the component, and adds a corresponding CSS selector to the CSS rules rendered by the `<link />` tag:
 
-![image-20240128031034068](/images/image-20240128031034068.png)
+![image-20240128031034068](images/image-20240128031034068.png)
 
