@@ -2,10 +2,11 @@
 $rootPath = Get-Location
 
 # Get all directories containing a .sln file
-$solutionDirectories = Get-ChildItem -Path $rootPath -Recurse -Filter Rockaway.sln | Select-Object -ExpandProperty DirectoryName | Sort-Object -Unique
+$solutionDirectories = Get-ChildItem -Path $rootPath -Recurse -Filter Rockaway.slnx | Select-Object -ExpandProperty DirectoryName | Sort-Object -Unique
 
 # Loop through each directory and execute dotnet commands
 foreach ($dir in $solutionDirectories) {
+	Write-Host "---------------------------------------------------------"
 	Write-Host "Processing directory: $dir"
 
 	# Change to the directory containing the .sln file

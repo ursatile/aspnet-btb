@@ -1,12 +1,14 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using Rockaway.WebApp.Data;
-using Rockaway.WebApp.Models;
+using Rockaway.WebApp.Data.Entities;
 
 namespace Rockaway.WebApp.Pages;
 
 public class ArtistsModel(RockawayDbContext db) : PageModel {
-	public IEnumerable<ArtistViewData> Artists = default!;
+	public IEnumerable<Artist> Artists = default!;
 
-	public void OnGet() => Artists = db.Artists
-		.Select(a => new ArtistViewData(a))
-		.ToList();
+	public void OnGet() {
+		Artists = db.Artists.OrderBy(a => a.Name);
+	}
 }

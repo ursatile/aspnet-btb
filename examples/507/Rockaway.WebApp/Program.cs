@@ -17,8 +17,10 @@ builder.Services.AddSassCompiler();
 var logger = CreateAdHocLogger<Program>();
 
 logger.LogInformation("Rockaway running in {environment} environment", builder.Environment.EnvironmentName);
-
-if(builder.Environment.UseSqlite()) {
+// A bug in .NET 8 means you can't call extension methods from Program.Main, otherwise
+// the aspnet-codegenerator tools fail with "Could not get the reflection type for DbContext"
+// ReSharper disable once InvokeAsExtensionMethod
+if (HostEnvironmentExtensions.UseSqlite(builder.Environment)) {
 	logger.LogInformation("Using Sqlite database");
 	var sqliteConnection = new SqliteConnection("Data Source=:memory:");
 	sqliteConnection.Open();
@@ -56,13 +58,14 @@ using (var scope = app.Services.CreateScope()) {
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
 app.MapGet("/status", (IStatusReporter reporter) => reporter.GetStatus());
 app.MapAreaControllerRoute(
 	name: "admin",

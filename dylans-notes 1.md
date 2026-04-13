@@ -31,7 +31,9 @@ builder.Services.AddRazorPages();
 and
 
 ```
-app.MapRazorPages();
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
 ```
 
 Add `/Pages/MyPage.cshtml`:

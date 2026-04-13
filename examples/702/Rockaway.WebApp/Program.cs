@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.Sqlite;
 using Mjml.Net;
 using RazorEngineCore;
-using Rockaway.RazorComponents;
 using Rockaway.WebApp.Data;
 using Rockaway.WebApp.Hosting;
 using Rockaway.WebApp.Services;
 using Rockaway.WebApp.Services.Mail;
+using Rockaway.WebApp.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -39,8 +39,10 @@ builder.Services.AddSassCompiler();
 var logger = CreateAdHocLogger<Program>();
 
 logger.LogInformation("Rockaway running in {environment} environment", builder.Environment.EnvironmentName);
-
-if (builder.Environment.UseSqlite()) {
+// A bug in .NET 8 means you can't call extension methods from Program.Main, otherwise
+// the aspnet-codegenerator tools fail with "Could not get the reflection type for DbContext"
+// ReSharper disable once InvokeAsExtensionMethod
+if (HostEnvironmentExtensions.UseSqlite(builder.Environment)) {
 	logger.LogInformation("Using Sqlite database");
 	var sqliteConnection = new SqliteConnection("Data Source=:memory:");
 	sqliteConnection.Open();
@@ -55,7 +57,6 @@ builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<Roc
 
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
-builder.WebHost.UseStaticWebAssets();
 
 builder.Services.AddRazorComponents()
 	.AddInteractiveServerComponents()
@@ -85,13 +86,14 @@ using (var scope = app.Services.CreateScope()) {
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
 app.MapGet("/status", (IStatusReporter reporter) => reporter.GetStatus());
 app.MapAreaControllerRoute(
 	name: "admin",

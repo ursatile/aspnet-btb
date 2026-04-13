@@ -47,3 +47,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+# Silence warnings about darken() being deprecated even in latest (2026-04-13) version of just-the-docs
+sass:
+  quiet_deps: true
