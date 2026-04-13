@@ -14,7 +14,8 @@ builder.Services.AddSingleton<IStatusReporter>(new StatusReporter());
 var logger = CreateAdHocLogger<Program>();
 
 logger.LogInformation("Rockaway running in {environment} environment", builder.Environment.EnvironmentName);
-if (builder.UseSqlite()) {
+
+if (builder.Environment.UseSqlite()) {
 	logger.LogInformation("Using Sqlite database");
 	var sqliteConnection = new SqliteConnection("Data Source=:memory:");
 	sqliteConnection.Open();

@@ -22,6 +22,9 @@ _site/
 *.userosscache
 *.sln.docstates
 
+#NCrunch
+.NCrunch*/
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
