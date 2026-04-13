@@ -85,13 +85,14 @@ using (var scope = app.Services.CreateScope()) {
 }
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+app.MapStaticAssets();
+app.MapRazorPages()
+   .WithStaticAssets();
 app.MapGet("/status", (IStatusReporter reporter) => reporter.GetStatus());
 app.MapAreaControllerRoute(
 	name: "admin",
