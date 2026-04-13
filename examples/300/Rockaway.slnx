@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Rockaway.WebApp.Tests/Rockaway.WebApp.Tests.csproj" />
+  <Project Path="Rockaway.WebApp/Rockaway.WebApp.csproj" />
+</Solution>

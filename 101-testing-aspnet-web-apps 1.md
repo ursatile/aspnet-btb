@@ -34,39 +34,11 @@ First, install the package. From the `Rockaway` folder:
 dotnet add Rockaway.WebApp.Tests package Microsoft.AspNetCore.Mvc.Testing
 ```
 
-Next, we'll need to modify our project so that we can make our web application's code visible to our testing project.
-
-Now we need to expose our **entry point** to the test project -- which is where it gets a bit gnarly. .NET has a feature called **top level statements**:
-
-```csharp
-// top level statements:
-Console.WriteLine("Look! Top level statements are awesome!");
-
-// without top level statements:
-internal class Program {
-  public static void Main() {
-    Console.WriteLine("Without top level statements, there's a lot more boilerplate code");
-  }
-}
-```
-
-Behind the scenes, the C# compiler is actually wrapping our code up in a `Program.Main()` method -- but because this all happens by magic, the resulting `Program` class is marked as `internal` -- which means that other projects, like our test project, can't see it.
-
-There are two ways to get around this. One is to modify the `Rockaway.WebApp.csproj` file and add this chunk of XML:
-
-```xml
-<ItemGroup>
-  <InternalsVisibleTo Include="Rockaway.WebApp.Tests" />
-</ItemGroup>
-```
-
-> If for any reason this doesn't work with your test runner, the other way is to add a line to our `Program.cs` which explicitly makes our `Program` class `public`:
+> In previous versions of .NET, if you used top-level statements, the compiler would generate the `Program` class for you, but this would be marked as `internal` and so it wouldn't be visible from other projects - like our test project.
 >
-> ```csharp
-> // Add this to the end of Program.cs
+> Consequently, you'd either have to add an `<InternalsVisibleTo/>` directive to your .csproj file, or to add the line `public partial class Program{}` to your code so that the resulting `Program` class would be public.
 >
-> public partial class Program {}
-> ```
+> In .NET 10, a [source generator is used](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-10.0?view=aspnetcore-10.0#better-support-for-testing-apps-with-top-level-statements) to inject a `public partial class Program{}` declaration into the compiled output, so you don't need to add this yourself
 
 Delete `UnitTest1.cs`, and create a new file.
 
@@ -76,7 +48,7 @@ Delete `UnitTest1.cs`, and create a new file.
 {% include_relative examples/101/Rockaway.WebApp.Tests/Pages/PageTests.cs %}
 ```
 
-> Notice that we're instantiating WebApplicationFactory with `await using`.
+> Notice that we're instantiating `WebApplicationFactory` with `await using`.
 >
 > `using` indicates we're constructing something that might need cleaning up, so the runtime will call `.Dispose()` on that object once it's no longer in use. `await using` means the clean-up can happen asynchronously, so the runtime will call `await DisposeAsync()` instead of `Dispose`.
 
@@ -86,7 +58,6 @@ Now run our test with `dotnet test` and verify that is passes.
 There are two more pages in our sample app - `/privacy` and `/contact`
 
 Add page tests that verify both of these pages return a success status code.
-
 
 
 

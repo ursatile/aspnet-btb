@@ -1,40 +1,50 @@
-using Microsoft.AspNetCore.Identity;
 using Microsoft.Data.Sqlite;
+using Microsoft.EntityFrameworkCore;
 using Rockaway.WebApp.Data;
+using Rockaway.WebApp.Hosting;
 using Rockaway.WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-builder.Services.AddRazorPages(options => options.Conventions.AuthorizeAreaFolder("admin", "/"));
-builder.Services.AddControllersWithViews(options => {
-	options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
-});
-builder.Services.AddSingleton<IClock>(SystemClock.Instance);
+// Add services to the container.
+builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
 builder.Services.AddSingleton<IStatusReporter>(new StatusReporter());
 
-builder.Services.AddRazorPages();
-
 var logger = CreateAdHocLogger<Program>();
+
 logger.LogInformation("Rockaway running in {environment} environment", builder.Environment.EnvironmentName);
-logger.LogInformation("Using Sqlite database");
-var sqliteConnection = new SqliteConnection("Data Source=:memory:");
-sqliteConnection.Open();
-builder.Services.AddDbContext<RockawayDbContext>(options => options.UseSqlite(sqliteConnection));
-builder.Services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<RockawayDbContext>();
+// A bug in .NET 8 means you can't call extension methods from Program.Main, otherwise
+// the aspnet-codegenerator tools fail with "Could not get the reflection type for DbContext"
+// ReSharper disable once InvokeAsExtensionMethod
+if (HostEnvironmentExtensions.UseSqlite(builder.Environment)) {
+	logger.LogInformation("Using Sqlite database");
+	var sqliteConnection = new SqliteConnection("Data Source=:memory:");
+	sqliteConnection.Open();
+	builder.Services.AddDbContext<RockawayDbContext>(options => options.UseSqlite(sqliteConnection));
+} else {
+	logger.LogInformation("Using SQL Server database");
+	var connectionString = builder.Configuration.GetConnectionString("AZURE_SQL_CONNECTIONSTRING");
+	builder.Services.AddDbContext<RockawayDbContext>(options => options.UseSqlServer(connectionString));
+}
+
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment()) {
+if (app.Environment.IsProduction()) {
 	app.UseExceptionHandler("/Error");
-	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
 	app.UseHsts();
+} else {
+	app.UseDeveloperExceptionPage();
 }
 
 using (var scope = app.Services.CreateScope()) {
 	using var db = scope.ServiceProvider.GetService<RockawayDbContext>()!;
-	db.Database.EnsureCreated();
+	// ReSharper disable once InvokeAsExtensionMethod
+	if (HostEnvironmentExtensions.UseSqlite(app.Environment)) {
+		db.Database.EnsureCreated();
+	}
 }
 
 app.UseHttpsRedirection();
@@ -46,13 +56,14 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapGet("/status", (IStatusReporter reporter) => reporter.GetStatus());
-
-app.MapAreaControllerRoute(
-	name: "admin",
-	areaName: "Admin",
-	pattern: "Admin/{controller=Home}/{action=Index}/{id?}"
-).RequireAuthorization();
 app.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-app.MapControllers();
 app.Run();
-ILogger<T> CreateAdHocLogger<T>() => LoggerFactory.Create(lb => lb.AddConsole()).CreateLogger<T>();
+
+ILogger<T> CreateAdHocLogger<T>() {
+	var config = new ConfigurationBuilder()
+		.AddJsonFile("appsettings.json", false, true)
+		.AddEnvironmentVariables()
+		.AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json", true, true)
+		.Build();
+	return LoggerFactory.Create(lb => lb.AddConfiguration(config)).CreateLogger<T>();
+}
