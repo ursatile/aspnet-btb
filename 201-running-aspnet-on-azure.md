@@ -38,7 +38,7 @@ You'll need to choose a unique name for your apps and resources which nobody els
 * **Region:** whatever you like.
 * Web App Details:
   * **Name**: something unique; your app will go live at `{name}.azurewebsites.net` so pick something nobody else is using. We'll use `rockaway-example` in these examples.
-  * **Runtime stack**: .NET 8 (LTS) *(LTS is "standard term support", as distinct from "long term support)"*
+  * **Runtime stack**: .NET 10 (LTS) *(LTS is "standard term support", as distinct from "long term support)"*
 * Database:
   * **Engine:** SQLAzure
   * **Server name:** `rockaway-example-server`

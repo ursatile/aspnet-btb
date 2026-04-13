@@ -22,10 +22,8 @@ builder.Services.AddSassCompiler();
 var logger = CreateAdHocLogger<Program>();
 
 logger.LogInformation("Rockaway running in {environment} environment", builder.Environment.EnvironmentName);
-// A bug in .NET 8 means you can't call extension methods from Program.Main, otherwise
-// the aspnet-codegenerator tools fail with "Could not get the reflection type for DbContext"
-// ReSharper disable once InvokeAsExtensionMethod
-if (HostEnvironmentExtensions.UseSqlite(builder.Environment)) {
+
+if(builder.Environment.UseSqlite()) {
 	logger.LogInformation("Using Sqlite database");
 	var sqliteConnection = new SqliteConnection("Data Source=:memory:");
 	sqliteConnection.Open();

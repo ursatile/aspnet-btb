@@ -96,11 +96,11 @@ Update `RockawayDbContext`:
        .WithOne(to => to.Show).OnDelete(DeleteBehavior.Restrict);
    ```
 
-3. Configure the composite key for `TicketOrderItem`. *(We're calling HasKey as a static method instead of an extension method because of [a bug in the .NET 8 release](https://github.com/dotnet/Scaffolding/issues/2623) of the `aspnet-codegenerator` tools that will probably be fixed soon.)*
+3. Configure the composite key for `TicketOrderItem`. 
    ```
    modelBuilder.Entity<TicketOrderItem>(entity => {
        // ReSharper disable once InvokeAsExtensionMethod
-       EntityTypeBuilderExtensions.HasKey(entity,
+       entity.HasKey(
            toi => toi.TicketOrder.Id,
            toi => toi.TicketType.Id
        );

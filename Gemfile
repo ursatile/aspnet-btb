@@ -7,5 +7,5 @@ gem "just-the-docs", "0.5.3" # pinned to the current release
 # gem "just-the-docs"        # always download the latest release
 
 gem 'jemoji'
-
+gem "csv"
 gem 'wdm', '>= 0.1.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

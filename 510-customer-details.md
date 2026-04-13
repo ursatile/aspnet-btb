@@ -52,7 +52,7 @@ To show the order summary, and handle the form submission, create a new class. W
 
 ## Validation and Non-Nullable Reference Types
 
-`OrderConfirmationPostData` includes a `TicketOrderViewData` property, which is a reference type -- and in .NET 8, reference types can't be null unless you make them optional. Which means the built-in validation is going to misbehave, 'cos if `OrderConfirmationPostData.TicketOrder` null, the model state isn't valid.
+`OrderConfirmationPostData` includes a `TicketOrderViewData` property, which is a reference type -- and in .NET 10, reference types can't be null unless you make them optional. Which means the built-in validation is going to misbehave, 'cos if `OrderConfirmationPostData.TicketOrder` null, the model state isn't valid.
 
 To work around this, find the line in `Program.cs`:
 

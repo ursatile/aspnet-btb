@@ -3,7 +3,7 @@ title: Home
 layout: home
 nav_order: 100
 ---
-This is the online handbook for "Beyond the Basics: Advanced Web Development with C# and ASP.NET 8"
+This is the online handbook for "Beyond the Basics: Advanced Web Development with C# and ASP.NET 10"
 
 <ul id="index-nav">
 {% assign contents = site.pages | where_exp:"item", "item.summary != nil" %}
