@@ -66,7 +66,7 @@ OK - we have a database, but no tables. Let's create them.
 >
 > `dotnet tool install --global dotnet-ef`
 >
-> or, if you've already got an earlier version of the tools installed, you can update them to .NET 8 using
+> or, if you've already got an earlier version of the tools installed, you can update them to .NET 10 using
 >
 > ```
 > dotnet tool update --global dotnet-ef
@@ -85,7 +85,7 @@ OK - we have a database, but no tables. Let's create them.
 >         | _| | _|   \_/ |  //|\\
 >         |___||_|       /   \\\/\\
 >
-> Entity Framework Core .NET Command-line Tools 8.0.1
+> Entity Framework Core .NET Command-line Tools 10.0.5
 > ```
 >
 > you're good to go.
