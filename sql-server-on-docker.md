@@ -17,10 +17,10 @@ You'll need [Docker Desktop](https://www.docker.com/products/docker-desktop/) in
 To download and the latest SQL Server 2022 image from Docker:
 
 ```
-docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=p@ssw0rd" -p 1433:1433 --name rockaway-mssql-server -d mcr.microsoft.com/mssql/server:2022-latest
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=p@ssw0rd" -p 1433:1433 --name rockaway-mssql-server -d mcr.microsoft.com/mssql/server:2025-latest
 ```
 
-This will pull  the latest SQL Server 2022 image from Microsoft's Docker image repo, and start a new instance:
+This will pull  the latest SQL Server 2025 image from Microsoft's Docker image repo, and start a new instance:
 
 * `-e "ACCEPT_EULA=Y"` will automatically accept the End User License Agreement (required to run SQL Server)
 * `-e "SA_PASSWORD=p@ssw0rd"` will set the `sa` password to `p@ssw0rd`
@@ -52,16 +52,19 @@ To copy the script into our Docker container and run it:
 ```powershell
 docker cp create-rockaway-database.sql rockaway-mssql-server:/opt/create-rockaway-database.sql
 
-docker exec -it rockaway-mssql-server /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P p@ssw0rd -i /opt/create-rockaway-database.sql
+docker exec -it rockaway-mssql-server /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P p@ssw0rd -C -i /opt/create-rockaway-database.sql
 ```
+
+{: .warning }
+> The path to the sqlcmd tools changed from `/opt/mssql-tools/bin` to `/opt/mssql-tools18/bin` at some point, so if it doesn't work check that.
 
 You should get a response something like:
 
 ```
-Microsoft SQL Server 2022 (RTM) - 16.0.1000.6 (X64)
-	Oct  8 2022 05:58:25
-	Copyright (C) 2022 Microsoft Corporation
-	Developer Edition (64-bit) on Linux (Ubuntu 20.04.5 LTS) <X64>
+Microsoft SQL Server 2025 (RTM-CU3-GDR) (KB5083245) - 17.0.4030.1 (X64)
+        Mar 12 2026 23:50:39
+        Copyright (C) 2025 Microsoft Corporation
+        Enterprise Developer Edition (64-bit) on Linux (Ubuntu 24.04.4 LTS) <X64>
 Changed database context to 'rockaway'.
 Adding user [rockaway_user] to database [rockaway]
 Done.
